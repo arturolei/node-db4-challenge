@@ -50,8 +50,8 @@ The requirements for the system, as stated by the client are:
 
 ### Migrations and Seeds
 
-- [] Write a migration file that creates all tables necessary to model this data
-- [] Write seed files to populate the tables with test data. **Hint**: Keep your recipes *very* simple or this step could become extremely time consuming.
+- [X] Write a migration file that creates all tables necessary to model this data
+- [X] Write seed files to populate the tables with test data. **Hint**: Keep your recipes *very* simple or this step could become extremely time consuming.
 
 ### Data Access
 
