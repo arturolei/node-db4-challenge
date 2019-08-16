@@ -14,17 +14,44 @@ Design the **data model** for a _recipe book_ application, then use `Knex migrat
 The requirements for the system, as stated by the client are:
 
 - have a way to manage recipes.
+
 - have a way to manage ingredients.
+
 - a **recipe** could have more than one **ingredient** and the same **ingredient** can be used in multiple recipes. Examples are _"cup of corn flour"_ or _"gram of butter"_.
+
 - when saving the ingredients for a **recipe** capture the quantity required for that **ingredient** as a floating number.
+
 - have a way to save step by step instructions for preparing a recipe.
 
 **Hint**: Before writing any code, write out all desired tables in the data model and determine all relationships between tables. 
 
+#### Schema Schemes/Ideas 
+
+**recipes**
+- id, primary key
+- name, string 
+
+
+**ingredients**
+- id, primary key
+- name, string
+
+**ingredients_recipes** (many to many)
+- foreign key, ingedient_id
+- foreign key, recipe_id
+- quantity, float
+- combined primary, [ingredient_id, recipe_id]
+
+**steps** (many to one)
+- id, primary key
+- step_description, string 
+- step_number, integer
+- foreign_key, recipe_id?
+
 ### Migrations and Seeds
 
-- Write a migration file that creates all tables necessary to model this data
-- Write seed files to populate the tables with test data. **Hint**: Keep your recipes *very* simple or this step could become extremely time consuming.
+- [] Write a migration file that creates all tables necessary to model this data
+- [] Write seed files to populate the tables with test data. **Hint**: Keep your recipes *very* simple or this step could become extremely time consuming.
 
 ### Data Access
 
