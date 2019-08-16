@@ -7,7 +7,7 @@ exports.up = function(knex) {
     })
     .createTable('ingredients', tbl => {
         tbl.increments('id');
-        tbl.string('ingredients_name', 128).notNullable();
+        tbl.string('ingredient_name', 128).notNullable();
     })
     .createTable('steps', tbl => {
         tbl.increments('id');
@@ -30,7 +30,7 @@ exports.up = function(knex) {
             .notNullable()
             .references('id').inTable('ingredients');
         tbl.float('quantity').notNullable();
-        tbl.primary(['recipe_id', 'animal_id'])
+        tbl.primary(['recipe_id', 'ingredient_id'])
     })
     );
 };
