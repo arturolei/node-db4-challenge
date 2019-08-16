@@ -31,7 +31,6 @@ The requirements for the system, as stated by the client are:
 - id, primary key
 - name, string 
 
-
 **ingredients**
 - id, primary key
 - name, string
@@ -44,14 +43,13 @@ The requirements for the system, as stated by the client are:
 
 **steps** (many to one)
 - id, primary key
-- step_description, string 
-- step_number, integer
+- name, string 
 - foreign_key, recipe_id?
 
 ### Migrations and Seeds
 
-- [X] Write a migration file that creates all tables necessary to model this data
-- [X] Write seed files to populate the tables with test data. **Hint**: Keep your recipes *very* simple or this step could become extremely time consuming.
+- [] Write a migration file that creates all tables necessary to model this data
+- [] Write seed files to populate the tables with test data. **Hint**: Keep your recipes *very* simple or this step could become extremely time consuming.
 
 ### Data Access
 
